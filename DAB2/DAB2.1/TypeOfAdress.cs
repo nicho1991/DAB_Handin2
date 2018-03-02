@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class TypeOfAdress
+public static class TypeOfAdress
+{
+    static public List<item> items = new List<item>();
+}
+
+public class item
 {
     public string type { get; set; }
 

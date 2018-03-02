@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 public class PersonIndex
 {
-    private List<Person> persons;
+    public List<Person> persons;
 
-    public void AddPerson(object person)
+    public void AddPerson(Person person)
     {
-        throw new Exception("Not implemented");
+        persons.Add(person);
     }
 
     public List<Person> GetPersons()
@@ -15,8 +15,4 @@ public class PersonIndex
         return persons;
     }
 
-    public void RemovePerson(object person)
-    {
-        throw new Exception("Not implemented");
-    }
 }
