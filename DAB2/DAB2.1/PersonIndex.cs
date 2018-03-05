@@ -7,7 +7,7 @@ namespace DAB2._1
         public void PrintPerson(Person printHim)
         {
             Console.WriteLine("navn " + printHim.GivenName + " " + printHim.MiddleName + " " +
-                              printHim.FamilyName);
+                              printHim.FamilyName + " " + printHim.PersonType);
             Console.WriteLine("email " + printHim.Email.UniqueEmail);
             foreach (var variable in printHim.Telephones)
                 Console.WriteLine(variable.TelephoneNumber + " " + variable.UsageOfTlf + " " +
