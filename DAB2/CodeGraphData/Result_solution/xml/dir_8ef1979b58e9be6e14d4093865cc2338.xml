@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_8ef1979b58e9be6e14d4093865cc2338" kind="dir">
+    <compoundname>D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2</compoundname>
+    <innerdir refid="dir_8d6bd97fdb7ef228b1b3dc2da25d6e8e">D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1</innerdir>
+    <innerdir refid="dir_7463016f831b27b6a34a99e216a62ade">D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/main</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/"/>
+  </compounddef>
+</doxygen>

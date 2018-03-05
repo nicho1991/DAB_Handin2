@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_person" kind="class" prot="public">
+    <compoundname>Person</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_person_1a1f8799907cac29173c4f132e8c2c235a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Person._personType</definition>
+        <argsstring></argsstring>
+        <name>_personType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="45" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" compoundref="_person_8cs" startline="6" endline="23">Person</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_person_1a55359ac64f5e6001338e62e5adc251de" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_telephone" kindref="compound">Telephone</ref> &gt;</type>
+        <definition>List&lt;Telephone&gt; Person.telephones</definition>
+        <argsstring></argsstring>
+        <name>telephones</name>
+        <initializer>= new List&lt;<ref refid="class_telephone" kindref="compound">Telephone</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="53" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_person_1acb85ef356a3d1fe4e8de5f2dce355ebd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_email" kindref="compound">Email</ref></type>
+        <definition>Email Person._email</definition>
+        <argsstring></argsstring>
+        <name>_email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="47" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" compoundref="_person_8cs" startline="6" endline="23">Person</referencedby>
+        <referencedby refid="class_person_1a2f1f28fa01ad9d2f10b3aecf411b25b7" compoundref="_person_8cs" startline="40" endline="43">replaceMail</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_person_1a1199001957ca499734c742722a8763da" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Person._familyName</definition>
+        <argsstring></argsstring>
+        <name>_familyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="48" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" compoundref="_person_8cs" startline="6" endline="23">Person</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_person_1adc02252ea0b1249cc709bbd83b0c2d0f" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_adress" kindref="compound">Adress</ref></type>
+        <definition>Adress Person.fRA</definition>
+        <argsstring></argsstring>
+        <name>fRA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="49" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_person_1a4a4e7d891f73ccd6825ffb4a75a8a84c" compoundref="_person_8cs" startline="25" endline="38">addAlternativeAdress</referencedby>
+        <referencedby refid="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" compoundref="_person_8cs" startline="6" endline="23">Person</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_person_1ac600d4af88ea86de9f45cd38f065eef3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Person._givenName</definition>
+        <argsstring></argsstring>
+        <name>_givenName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="50" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" compoundref="_person_8cs" startline="6" endline="23">Person</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_person_1a4158f4f76553fc35c6ef2272c4a7b43e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Person._middleName</definition>
+        <argsstring></argsstring>
+        <name>_middleName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="51" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" compoundref="_person_8cs" startline="6" endline="23">Person</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Person.Person</definition>
+        <argsstring>(Telephone phone, Adress primaryAdress, string name, string famileName, string middleName, string type, Email mail=null)</argsstring>
+        <name>Person</name>
+        <param>
+          <type><ref refid="class_telephone" kindref="compound">Telephone</ref></type>
+          <declname>phone</declname>
+        </param>
+        <param>
+          <type><ref refid="class_adress" kindref="compound">Adress</ref></type>
+          <declname>primaryAdress</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>famileName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>middleName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="class_email" kindref="compound">Email</ref></type>
+          <declname>mail</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="6" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="6" bodyend="23"/>
+        <references refid="class_person_1acb85ef356a3d1fe4e8de5f2dce355ebd" compoundref="_person_8cs" startline="47">_email</references>
+        <references refid="class_person_1a1199001957ca499734c742722a8763da" compoundref="_person_8cs" startline="48">_familyName</references>
+        <references refid="class_person_1ac600d4af88ea86de9f45cd38f065eef3" compoundref="_person_8cs" startline="50">_givenName</references>
+        <references refid="class_person_1a4158f4f76553fc35c6ef2272c4a7b43e" compoundref="_person_8cs" startline="51">_middleName</references>
+        <references refid="class_person_1a1f8799907cac29173c4f132e8c2c235a" compoundref="_person_8cs" startline="45">_personType</references>
+        <references refid="class_person_1adc02252ea0b1249cc709bbd83b0c2d0f" compoundref="_person_8cs" startline="49">fRA</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a4a4e7d891f73ccd6825ffb4a75a8a84c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Person.addAlternativeAdress</definition>
+        <argsstring>(Adress altAdress)</argsstring>
+        <name>addAlternativeAdress</name>
+        <param>
+          <type><ref refid="class_adress" kindref="compound">Adress</ref></type>
+          <declname>altAdress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="25" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="25" bodyend="38"/>
+        <references refid="class_person_1adc02252ea0b1249cc709bbd83b0c2d0f" compoundref="_person_8cs" startline="49">fRA</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a2f1f28fa01ad9d2f10b3aecf411b25b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Person.replaceMail</definition>
+        <argsstring>(Email mail)</argsstring>
+        <name>replaceMail</name>
+        <param>
+          <type><ref refid="class_email" kindref="compound">Email</ref></type>
+          <declname>mail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="40" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="40" bodyend="43"/>
+        <references refid="class_person_1acb85ef356a3d1fe4e8de5f2dce355ebd" compoundref="_person_8cs" startline="47">_email</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" line="5" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Person.cs" bodystart="4" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_person_1acb85ef356a3d1fe4e8de5f2dce355ebd" prot="public" virt="non-virtual"><scope>Person</scope><name>_email</name></member>
+      <member refid="class_person_1a1199001957ca499734c742722a8763da" prot="public" virt="non-virtual"><scope>Person</scope><name>_familyName</name></member>
+      <member refid="class_person_1ac600d4af88ea86de9f45cd38f065eef3" prot="public" virt="non-virtual"><scope>Person</scope><name>_givenName</name></member>
+      <member refid="class_person_1a4158f4f76553fc35c6ef2272c4a7b43e" prot="public" virt="non-virtual"><scope>Person</scope><name>_middleName</name></member>
+      <member refid="class_person_1a1f8799907cac29173c4f132e8c2c235a" prot="public" virt="non-virtual"><scope>Person</scope><name>_personType</name></member>
+      <member refid="class_person_1a4a4e7d891f73ccd6825ffb4a75a8a84c" prot="public" virt="non-virtual"><scope>Person</scope><name>addAlternativeAdress</name></member>
+      <member refid="class_person_1adc02252ea0b1249cc709bbd83b0c2d0f" prot="private" virt="non-virtual"><scope>Person</scope><name>fRA</name></member>
+      <member refid="class_person_1a3dc2e882d34ed0227cd5dd17546f260b" prot="public" virt="non-virtual"><scope>Person</scope><name>Person</name></member>
+      <member refid="class_person_1a2f1f28fa01ad9d2f10b3aecf411b25b7" prot="public" virt="non-virtual"><scope>Person</scope><name>replaceMail</name></member>
+      <member refid="class_person_1a55359ac64f5e6001338e62e5adc251de" prot="public" virt="non-virtual"><scope>Person</scope><name>telephones</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

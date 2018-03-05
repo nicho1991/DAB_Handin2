@@ -1,55 +1,49 @@
 using System.Collections.Generic;
-using System.Dynamic;
 
 public class Person
 {
+    public string PersonType;
+
+    public List<Telephone> Telephones = new List<Telephone>();
+
     public Person(Telephone phone, Adress primaryAdress, string name, string famileName, string middleName, string type,
         Email mail = null)
     {
-        _personType = type;
-        _email = mail;
-        telephones.Add(phone);
-        fRA = primaryAdress;
+        PersonType = type;
+        Email = mail;
+        Telephones.Add(phone);
+        FRa = primaryAdress;
 
-        item bla = new item();
-        bla.type = "alternative adress";
-        bla.personer = this;
-        bla.adresse = primaryAdress;
+        var bla = new Item();
+        bla.Type = "alternative adress";
+        bla.Personer = this;
+        bla.Adresse = primaryAdress;
 
-        _givenName = name;
-        _middleName = middleName;
-        _familyName = famileName;
-
+        GivenName = name;
+        MiddleName = middleName;
+        FamilyName = famileName;
     }
 
-    public void addAlternativeAdress(Adress altAdress)
+    public Email Email { get; set; }
+    public string FamilyName { get; }
+    private Adress FRa { get; }
+    public string GivenName { get; }
+    public string MiddleName { get; }
+
+    public void AddAlternativeAdress(Adress altAdress)
     {
-        if (altAdress == fRA)
-        {
-            return;
-        }
+        if (altAdress == FRa) return;
 
-        item bla = new item();
-        bla.type = "alternative adress";
-        bla.personer = this;
-        bla.adresse = altAdress;
+        var bla = new Item();
+        bla.Type = "alternative adress";
+        bla.Personer = this;
+        bla.Adresse = altAdress;
 
-        TypeOfAdress.items.Add(bla);
+        TypeOfAdress.Items.Add(bla);
     }
 
-    public void replaceMail(Email mail)
+    public void ReplaceMail(Email mail)
     {
-        _email = mail;
+        Email = mail;
     }
-
-    public string _personType;
-
-    public Email _email { get; set; }
-    public string _familyName { get; }
-    private Adress fRA { get; }
-    public string _givenName { get; }
-    public string _middleName { get; }
-
-    public List<Telephone> telephones = new List<Telephone>();
-    
 }

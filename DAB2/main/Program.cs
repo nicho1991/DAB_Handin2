@@ -1,31 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-using DAB2._1;
-
+﻿using DAB2._1;
 
 namespace main
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Telephone tlf1 = new Telephone("12345678", "penisCompany", "bootyCalls");
-            Email mail1 = new Email("penis@penis.penis");
-            Adress adr1 = new Adress("penis", "1337a", "penis", "penisBy");
-            Person person1 = new Person(tlf1, adr1, "pik", "tissekone", "pek", "multiGender", mail1);
+            var personItem = new Item();
 
-            item personItem = new item();
-            personItem.type = "primary";
-            personItem.adresse = adr1;
-            personItem.personer = person1;
+            var tlf1 = new Telephone("12345678", "penisCompany", "bootyCalls");
+            var mail1 = new Email("penis@penis.penis");
+            var adr1 = new Adress("penis", "1337a", "penis", "penisBy");
+            var person1 = new Person(tlf1, adr1, "pik", "tissekone", "pek", "multiGender", mail1);
+            personItem.Type = "primary";
+            personItem.Adresse = adr1;
+            personItem.Personer = person1;
 
-            TypeOfAdress.items.Add(personItem);
+            TypeOfAdress.Items.Add(personItem);
 
-            PersonIndex person = new PersonIndex();
+            var person = new PersonIndex();
 
-            person.printPerson(person1);
+            person.PrintPerson(person1);
         }
     }
 }

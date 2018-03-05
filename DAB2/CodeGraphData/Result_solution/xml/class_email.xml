@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_email" kind="class" prot="public">
+    <compoundname>Email</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_email_1a1bec4b82f4fd55a3d10c6b349fa61ad7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Email.uniqueEmail</definition>
+        <argsstring></argsstring>
+        <name>uniqueEmail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Email.cs" line="9" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Email.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_email_1a1d71cc34c8c024368364e7ec468d3e38" compoundref="_email_8cs" startline="5" endline="8">Email</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_email_1a1d71cc34c8c024368364e7ec468d3e38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Email.Email</definition>
+        <argsstring>(string email)</argsstring>
+        <name>Email</name>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Email.cs" line="5" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Email.cs" bodystart="5" bodyend="8"/>
+        <references refid="class_email_1a1bec4b82f4fd55a3d10c6b349fa61ad7" compoundref="_email_8cs" startline="9">uniqueEmail</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Email.cs" line="3" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Email.cs" bodystart="2" bodyend="10"/>
+    <listofallmembers>
+      <member refid="class_email_1a1d71cc34c8c024368364e7ec468d3e38" prot="public" virt="non-virtual"><scope>Email</scope><name>Email</name></member>
+      <member refid="class_email_1a1bec4b82f4fd55a3d10c6b349fa61ad7" prot="public" virt="non-virtual"><scope>Email</scope><name>uniqueEmail</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

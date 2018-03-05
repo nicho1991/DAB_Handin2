@@ -1,33 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAB2._1
 {
     public class PersonIndex
     {
-        public void printPerson(Person printHIM)
+        public void PrintPerson(Person printHim)
         {
-                Console.WriteLine("navn " + printHIM._givenName + " " + printHIM._middleName + " " +
-                                  printHIM._familyName);
-                Console.WriteLine("email " + printHIM._email.uniqueEmail);
-                foreach (var VARIABLE in printHIM.telephones)
-                {
-                    Console.WriteLine(VARIABLE._telephoneNumber + " " + VARIABLE._usageOfTlf + " " +
-                                      VARIABLE._phoneCompany);
-                }
-            
+            Console.WriteLine("navn " + printHim.GivenName + " " + printHim.MiddleName + " " +
+                              printHim.FamilyName);
+            Console.WriteLine("email " + printHim.Email.UniqueEmail);
+            foreach (var variable in printHim.Telephones)
+                Console.WriteLine(variable.TelephoneNumber + " " + variable.UsageOfTlf + " " +
+                                  variable.PhoneCompany);
 
-            foreach (var pikItem in TypeOfAdress.items) //print adresser
-            {
-                if (pikItem.personer == printHIM)
-                {
-                    Console.WriteLine("Adresser " + pikItem.adresse._zipCode + " "+pikItem.adresse._cityName + " " + pikItem.adresse._streetName + " " + pikItem.adresse._houseNumber) ;
-                }
-            }
-
+            foreach (var pikItem in TypeOfAdress.Items) //print adresser
+                if (pikItem.Personer == printHim)
+                    Console.WriteLine("Adresser " + pikItem.Adresse.ZipCode + " " + pikItem.Adresse.CityName + " " +
+                                      pikItem.Adresse.StreetName + " " + pikItem.Adresse.HouseNumber);
         }
     }
 }

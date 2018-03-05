@@ -1,10 +1,9 @@
-using System;
 public class Email
 {
-
     public Email(string email)
     {
-        uniqueEmail = email;
+        UniqueEmail = email;
     }
-	public string uniqueEmail { get; set; }
+
+    public string UniqueEmail { get; set; }
 }

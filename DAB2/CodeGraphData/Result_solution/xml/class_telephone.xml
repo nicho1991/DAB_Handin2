@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_telephone" kind="class" prot="public">
+    <compoundname>Telephone</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_telephone_1aadeb6bd20ea8003bbb56b816c5789fe7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Telephone._phoneCompany</definition>
+        <argsstring></argsstring>
+        <name>_phoneCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" line="11" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_telephone_1adcf5539f62f4a7d33d19c60754a8690c" compoundref="telephone_8cs" startline="3" endline="8">Telephone</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_telephone_1a525f9c31a7ef1d24f805e9a1e70565e7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Telephone._telephoneNumber</definition>
+        <argsstring></argsstring>
+        <name>_telephoneNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" line="12" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_telephone_1adcf5539f62f4a7d33d19c60754a8690c" compoundref="telephone_8cs" startline="3" endline="8">Telephone</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_telephone_1a9199e4903d1907f191b5026aa84d4585" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Telephone._usageOfTlf</definition>
+        <argsstring></argsstring>
+        <name>_usageOfTlf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" line="13" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_telephone_1adcf5539f62f4a7d33d19c60754a8690c" compoundref="telephone_8cs" startline="3" endline="8">Telephone</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_telephone_1adcf5539f62f4a7d33d19c60754a8690c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Telephone.Telephone</definition>
+        <argsstring>(string telephoneNumber, string phoneCompany, string usage)</argsstring>
+        <name>Telephone</name>
+        <param>
+          <type>string</type>
+          <declname>telephoneNumber</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>phoneCompany</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" line="3" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" bodystart="3" bodyend="8"/>
+        <references refid="class_telephone_1aadeb6bd20ea8003bbb56b816c5789fe7" compoundref="telephone_8cs" startline="11">_phoneCompany</references>
+        <references refid="class_telephone_1a525f9c31a7ef1d24f805e9a1e70565e7" compoundref="telephone_8cs" startline="12">_telephoneNumber</references>
+        <references refid="class_telephone_1a9199e4903d1907f191b5026aa84d4585" compoundref="telephone_8cs" startline="13">_usageOfTlf</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" line="2" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs" bodystart="1" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_telephone_1aadeb6bd20ea8003bbb56b816c5789fe7" prot="public" virt="non-virtual"><scope>Telephone</scope><name>_phoneCompany</name></member>
+      <member refid="class_telephone_1a525f9c31a7ef1d24f805e9a1e70565e7" prot="public" virt="non-virtual"><scope>Telephone</scope><name>_telephoneNumber</name></member>
+      <member refid="class_telephone_1a9199e4903d1907f191b5026aa84d4585" prot="public" virt="non-virtual"><scope>Telephone</scope><name>_usageOfTlf</name></member>
+      <member refid="class_telephone_1adcf5539f62f4a7d33d19c60754a8690c" prot="public" virt="non-virtual"><scope>Telephone</scope><name>Telephone</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="telephone_8cs" kind="file">
+    <compoundname>telephone.cs</compoundname>
+    <innerclass refid="class_telephone" prot="public">Telephone</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_telephone" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_telephone" kindref="compound">Telephone</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_telephone_1adcf5539f62f4a7d33d19c60754a8690c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_telephone_1adcf5539f62f4a7d33d19c60754a8690c" kindref="member">Telephone</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>telephoneNumber,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>phoneCompany,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>usage)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_telephone_1aadeb6bd20ea8003bbb56b816c5789fe7" kindref="member">_phoneCompany</ref><sp/>=<sp/>phoneCompany;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_telephone_1a525f9c31a7ef1d24f805e9a1e70565e7" kindref="member">_telephoneNumber</ref><sp/>=<sp/>telephoneNumber;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_telephone_1a9199e4903d1907f191b5026aa84d4585" kindref="member">_usageOfTlf</ref><sp/>=<sp/>usage;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_telephone_1aadeb6bd20ea8003bbb56b816c5789fe7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_telephone_1aadeb6bd20ea8003bbb56b816c5789fe7" kindref="member">_phoneCompany</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="12" refid="class_telephone_1a525f9c31a7ef1d24f805e9a1e70565e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_telephone_1a525f9c31a7ef1d24f805e9a1e70565e7" kindref="member">_telephoneNumber</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="13" refid="class_telephone_1a9199e4903d1907f191b5026aa84d4585" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_telephone_1a9199e4903d1907f191b5026aa84d4585" kindref="member">_usageOfTlf</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/telephone.cs"/>
+  </compounddef>
+</doxygen>
