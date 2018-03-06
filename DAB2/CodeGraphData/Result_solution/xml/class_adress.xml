@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_adress" kind="class" prot="public">
+    <compoundname>Adress</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_adress_1afd9ed66e1897a657ddf76d2555fd6d09" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Adress._cityName</definition>
+        <argsstring></argsstring>
+        <name>_cityName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" line="14" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_adress_1a94a8be595f8cb71954dd7d2b71853dca" compoundref="_adress_8cs" startline="5" endline="12">Adress</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_adress_1abf2a5d9a41c13dfb57be2d378b0a8512" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Adress._houseNumber</definition>
+        <argsstring></argsstring>
+        <name>_houseNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" line="15" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_adress_1a94a8be595f8cb71954dd7d2b71853dca" compoundref="_adress_8cs" startline="5" endline="12">Adress</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_adress_1aa4b4cf3caff914c5096b82ecf0e5934d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Adress._streetName</definition>
+        <argsstring></argsstring>
+        <name>_streetName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" line="16" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_adress_1a94a8be595f8cb71954dd7d2b71853dca" compoundref="_adress_8cs" startline="5" endline="12">Adress</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_adress_1a45b6451938015a569bfb3c5b6cafde9e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Adress._zipCode</definition>
+        <argsstring></argsstring>
+        <name>_zipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" line="17" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_adress_1a94a8be595f8cb71954dd7d2b71853dca" compoundref="_adress_8cs" startline="5" endline="12">Adress</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adress_1a94a8be595f8cb71954dd7d2b71853dca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Adress.Adress</definition>
+        <argsstring>(string streetName, string HouseNumber, string zipCode, string cityName)</argsstring>
+        <name>Adress</name>
+        <param>
+          <type>string</type>
+          <declname>streetName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>HouseNumber</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>zipCode</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>cityName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" line="5" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" bodystart="5" bodyend="12"/>
+        <references refid="class_adress_1afd9ed66e1897a657ddf76d2555fd6d09" compoundref="_adress_8cs" startline="14">_cityName</references>
+        <references refid="class_adress_1abf2a5d9a41c13dfb57be2d378b0a8512" compoundref="_adress_8cs" startline="15">_houseNumber</references>
+        <references refid="class_adress_1aa4b4cf3caff914c5096b82ecf0e5934d" compoundref="_adress_8cs" startline="16">_streetName</references>
+        <references refid="class_adress_1a45b6451938015a569bfb3c5b6cafde9e" compoundref="_adress_8cs" startline="17">_zipCode</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" line="4" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/Adress.cs" bodystart="3" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_adress_1afd9ed66e1897a657ddf76d2555fd6d09" prot="public" virt="non-virtual"><scope>Adress</scope><name>_cityName</name></member>
+      <member refid="class_adress_1abf2a5d9a41c13dfb57be2d378b0a8512" prot="public" virt="non-virtual"><scope>Adress</scope><name>_houseNumber</name></member>
+      <member refid="class_adress_1aa4b4cf3caff914c5096b82ecf0e5934d" prot="public" virt="non-virtual"><scope>Adress</scope><name>_streetName</name></member>
+      <member refid="class_adress_1a45b6451938015a569bfb3c5b6cafde9e" prot="public" virt="non-virtual"><scope>Adress</scope><name>_zipCode</name></member>
+      <member refid="class_adress_1a94a8be595f8cb71954dd7d2b71853dca" prot="public" virt="non-virtual"><scope>Adress</scope><name>Adress</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

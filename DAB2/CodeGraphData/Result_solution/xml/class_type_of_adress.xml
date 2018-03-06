@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_type_of_adress" kind="class" prot="public">
+    <compoundname>TypeOfAdress</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_type_of_adress_1a99c16032b9c7cab71247452ea237feb0" prot="public" static="yes" mutable="no">
+        <type>List&lt; <ref refid="classitem" kindref="compound">item</ref> &gt;</type>
+        <definition>List&lt;item&gt; TypeOfAdress.items</definition>
+        <argsstring></argsstring>
+        <name>items</name>
+        <initializer>= new List&lt;<ref refid="classitem" kindref="compound">item</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/TypeOfAdress.cs" line="6" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/TypeOfAdress.cs" bodystart="6" bodyend="-1"/>
+        <referencedby refid="class_d_a_b2_1_1__1_1_1_person_index_1a23b944819b1995ad5bd090e8f8e602a9" compoundref="_person_index_8cs" startline="11" endline="31">DAB2._1.PersonIndex.printPerson</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/TypeOfAdress.cs" line="5" column="1" bodyfile="D:/git/4.semester/DAB/DAB_Handin2/DAB2_Code/DAB2/DAB2.1/TypeOfAdress.cs" bodystart="4" bodyend="7"/>
+    <listofallmembers>
+      <member refid="class_type_of_adress_1a99c16032b9c7cab71247452ea237feb0" prot="public" virt="non-virtual"><scope>TypeOfAdress</scope><name>items</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
