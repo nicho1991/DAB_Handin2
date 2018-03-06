@@ -8,7 +8,11 @@ namespace DAB2._1
         {
             Console.WriteLine("navn " + printHim.GivenName + " " + printHim.MiddleName + " " +
                               printHim.FamilyName + " Køn " + printHim.PersonType);
-            Console.WriteLine("email " + printHim.Email.UniqueEmail);
+            if (printHim.Email != null)
+            {
+                Console.WriteLine("email " + printHim.Email.UniqueEmail);
+            }
+           
             foreach (var variable in printHim.Telephones)
                 Console.WriteLine(variable.TelephoneNumber + " " + variable.UsageOfTlf + " " +
                                   variable.PhoneCompany);

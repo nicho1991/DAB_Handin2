@@ -4,7 +4,7 @@ public class Person
 {
     public string PersonType;
 
-    public List<Telephone> Telephones  { get; set;}
+    public List<Telephone> Telephones = new List<Telephone>();
 
     public Person(Telephone phone, Adress primaryAdress, string name, string famileName, string middleName, string type,
         Email mail = null)
