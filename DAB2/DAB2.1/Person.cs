@@ -4,7 +4,7 @@ public class Person
 {
     public string PersonType;
 
-    public List<Telephone> Telephones = new List<Telephone>();
+    public List<Telephone> Telephones  { get; set;}
 
     public Person(Telephone phone, Adress primaryAdress, string name, string famileName, string middleName, string type,
         Email mail = null)
@@ -26,7 +26,7 @@ public class Person
 
     public Email Email { get; set; }
     public string FamilyName { get; }
-    private Adress FRa { get; }
+    private Adress FRa { get;}
     public string GivenName { get; }
     public string MiddleName { get; }
 
