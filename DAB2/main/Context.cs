@@ -9,6 +9,7 @@ namespace DAB2_2
         public DbSet<Email> EmailSet { get; set; }
         public DbSet<Person> PersonSet { get; set; }
         public DbSet<Telephone> TelephoneSet { get; set; }
+        public DbSet<TypeOfAdress> TypeOfAdressesSet { get; set; }
     }
 
 }
