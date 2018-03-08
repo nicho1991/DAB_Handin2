@@ -7,7 +7,7 @@ public class Telephone
         UsageOfTlf = usage;
     }
 
-
+    public int telephoneId { get; set; }
     public string PhoneCompany { get; set; }
     public string TelephoneNumber { get; set; }
     public string UsageOfTlf { get; set; }

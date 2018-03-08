@@ -2,7 +2,14 @@ using System.Collections.Generic;
 
 public class Person
 {
-    public string PersonType;
+    public int PersonID { get; set; }
+    public string PersonType { get; set; }
+
+    public Email Email { get; set; }
+    public string FamilyName { get; }
+    private Adress FRa { get; }
+    public string GivenName { get; }
+    public string MiddleName { get; }
 
     public List<Telephone> Telephones = new List<Telephone>();
 
@@ -23,12 +30,6 @@ public class Person
         MiddleName = middleName;
         FamilyName = famileName;
     }
-
-    public Email Email { get; set; }
-    public string FamilyName { get; }
-    private Adress FRa { get;}
-    public string GivenName { get; }
-    public string MiddleName { get; }
 
     public void AddAlternativeAdress(Adress altAdress)
     {

@@ -9,7 +9,8 @@ namespace DAB2_2
         {
             using (var db = new personIndexContext())
             {
-                    
+                var adressOne = new Adress("Værkmestergade","22A","8000","Aarhus");
+                db.AdressesSet.Add(adressOne);
             }
         }
     }

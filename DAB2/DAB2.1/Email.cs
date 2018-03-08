@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 public class Email
 {
     public Email(string email)
@@ -5,5 +7,6 @@ public class Email
         UniqueEmail = email;
     }
 
+    [Key]
     public string UniqueEmail { get; set; }
 }
