@@ -35,7 +35,8 @@ namespace Main2._2
             //UOW.PersonRepository.Add(person2);
             //UOW.Commit();
 
-            UOW.PersonRepository.GetById(1);
+            Console.WriteLine(UOW.PersonRepository.First(x => x.GivenName == "peter").GivenName); //insane
+ 
             foreach (var VARIABLE in UOW.PersonRepository.GetAll())
             {
                 Console.WriteLine(VARIABLE.GivenName);
