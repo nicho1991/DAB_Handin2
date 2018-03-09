@@ -7,7 +7,7 @@ public class Person
     public virtual ICollection<TypeOfAdress> TypeOfAdress { get; set; }
     public Email Email { get; set; }
     public string FamilyName { get; set; }
-    public Adress FRa { get; set; }
+    private Adress FRa { get; set; }
     public string GivenName { get; set; }
     public string MiddleName { get; set; }
 

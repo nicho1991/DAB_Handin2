@@ -34,7 +34,6 @@ namespace DAB2_2
                 tele.TelephoneNumber = "20298780";
                 tele.UsageOfTlf = "Privat";
 
-
                 db.TelephoneSet.Add(tele);   
                 db.AdressesSet.Add(adressOne);
                 db.EmailSet.Add(persEmail);

@@ -47,17 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adress.cs" />
-    <Compile Include="Email.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="PersonIndex.cs" />
+    <Compile Include="dbSets\Context.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Tables\Adress.cs" />
+    <Compile Include="Tables\Email.cs" />
+    <Compile Include="Tables\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="telephone.cs" />
-    <Compile Include="TypeOfAdress.cs" />
+    <Compile Include="Tables\telephone.cs" />
+    <Compile Include="Tables\TypeOfAdress.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UnitOfWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
