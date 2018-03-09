@@ -1,48 +1,56 @@
-﻿
-using System.Data.Entity;
+﻿using System;
+using DAB2._1;
 
-namespace DAB2_2
+namespace main
 {
-    public class Program
+    internal class Program
     {
         private static void Main()
         {
-            using (var db = new personIndexContext())
-            {
-                Adress adressOne = new Adress();
-                adressOne.ZipCode = "8000";
-                adressOne.CityName = "Aarhus";
-                adressOne.HouseNumber = "130";
-                adressOne.StreetName = "Nygadeda";
+            //opret jesper
+            var tlfJesper = new Telephone("88888888", "TeleDanmark", "Erhverv");
+            var mailJesper = new Email("one@two-three.dk");
+            var adr1 = new Adress("Ringvej", "7a", "8000", "Aarhus C");
+            var adr2 = new Adress("Landmands vej" , "1" , "2900" , "Hellerup");
+            var personJesper = new Person(tlfJesper, adr1, "Jesper", "Jespersen", "Jes", "Mand", mailJesper);
 
-                Person per = new Person();
-                Email persEmail = new Email();
-                persEmail.UniqueEmail = "anotherteste3new@mail.dk";
-                per.Email = persEmail;
-                per.FamilyName = "Hans";
-                per.GivenName = "Lars";
-                per.MiddleName = "";
-                per.PersonType = "Mand";
+            //opret jesper item
+            var personItem = new Item();
+            personItem.Type = "primær";
+            personItem.Adresse = adr1;
+            personItem.Personer = personJesper;
 
-                TypeOfAdress PersonAdresseRelation = new TypeOfAdress();
-                PersonAdresseRelation.PersonID = per.PersonID; // sæt persons id til relation
-                PersonAdresseRelation.AdressId = adressOne.AdressID;
-                PersonAdresseRelation.AdressType = "Primary";
+            //giv jesper en alternativ adresse
+            var altItem = new Item();
+            altItem.Adresse = adr2;
+            altItem.Personer = personJesper;
+            altItem.Type = "sekundær";
 
-                Telephone tele = new Telephone();
-                tele.PhoneCompany = "TDC";
-                tele.TelephoneNumber = "20298780";
-                tele.UsageOfTlf = "Privat";
+           
 
-                db.TelephoneSet.Add(tele);   
-                db.AdressesSet.Add(adressOne);
-                db.EmailSet.Add(persEmail);
-                db.PersonSet.Add(per);
-                db.TypeOfAdressesSet.Add(PersonAdresseRelation);
+            //opret Peter
+            var tlf2 = new Telephone("77777777", "TeleDanmark", "Erhverv");
+            var mailPeter = new Email("two@two-three.dk");
+            var person2 = new Person(tlf2, adr1, "Peter", "Jensen", "", "Mand",mailPeter);
+            //giv peter en adresse
+            var person3Item = new Item();
+            person3Item.Adresse = adr1;
+            person3Item.Personer = person2;
+            person3Item.Type = "primær";
 
-                db.SaveChanges();
-            }
+            //tilføj dem til adresserne
+            TypeOfAdress.Items.Add(altItem);
+            TypeOfAdress.Items.Add(personItem);
+            TypeOfAdress.Items.Add(person3Item);
+
+            //opret et index (til udprintning)
+            var person = new PersonIndex();
+
+            person.PrintPerson(personJesper);
+            Console.WriteLine("\n");
+            person.PrintPerson(person2);
+
+           
         }
     }
-
 }
