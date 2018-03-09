@@ -46,7 +46,7 @@
     <Compile Include="PersonIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Content\telephone.cs" />
-    <Compile Include="Content\TypeOfAdress.cs" />
+    <Compile Include="Content\AltAdresse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

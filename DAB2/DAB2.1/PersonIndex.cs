@@ -6,21 +6,35 @@ namespace DAB2._1
     {
         public void PrintPerson(Person printHim)
         {
-            Console.WriteLine("Navn: " + printHim.GivenName + " " + printHim.MiddleName + " " +
-                              printHim.FamilyName + " Køn " + printHim.PersonType);
+            //navn
+            Console.WriteLine("Navn:\t\t\t" + printHim.GivenName + " " + printHim.MiddleName + " " +
+                              printHim.FamilyName);
+            //køn
+            Console.WriteLine("Køn\t\t\t" + printHim.PersonType);
+            //mail
             if (printHim.Email != null)
             {
-                Console.WriteLine("Email: " + printHim.Email.UniqueEmail);
+                Console.WriteLine("Email:\t\t\t" + printHim.Email.UniqueEmail);
+            }
+            //telefoner
+            Console.WriteLine("telefon(er): ");
+            int telefoner = 1;
+            foreach (var variable in printHim.Telephones)
+                Console.WriteLine((telefoner++)+"." + "\t\t\t" + variable.TelephoneNumber + " Type: " + variable.UsageOfTlf + " Teleselskab: " + variable.PhoneCompany); 
+
+            // print primær adresse
+            Console.WriteLine("Primær adresse:\t\t" + printHim.FRa.ZipCode + " " + printHim.FRa.CityName + " " + printHim.FRa.StreetName + " " + printHim.FRa.HouseNumber);
+
+            //alternative adresser
+            if (printHim.altAdresser.Count > 0)
+            {
+                Console.WriteLine("Andre adresser: ");
             }
            
-            foreach (var variable in printHim.Telephones)
-                Console.WriteLine("Telefon: " + variable.TelephoneNumber + " Type: " + variable.UsageOfTlf + " Teleselskab: " +
-                                  variable.PhoneCompany);
-
-            foreach (var pikItem in TypeOfAdress.Items) //print adresser
-                if (pikItem.Personer == printHim)
-                    Console.WriteLine("Adresse: " + " " + pikItem.Type + " " + pikItem.Adresse.ZipCode + " " + pikItem.Adresse.CityName + " " +
-                                      pikItem.Adresse.StreetName + " " + pikItem.Adresse.HouseNumber);
+            int adresser = 1;
+            foreach (var Adresse in printHim.altAdresser) //print alternative adresser
+                    Console.WriteLine(adresser++ +"."+ "\t\t\t" + Adresse.TypeOfAdress + " " + Adresse.AlternativeAdress.ZipCode + " " + Adresse.AlternativeAdress.CityName + " " +
+                                      Adresse.AlternativeAdress.StreetName + " " + Adresse.AlternativeAdress.HouseNumber);
         }
     }
 }
