@@ -12,35 +12,42 @@ namespace Main2._2
         static void Main(string[] args)
         {
             EFUnitOfWork UOW = new EFUnitOfWork();
-            ////opret jesper
-            //var tlfJesper = new Telephone("88888888", "TeleDanmark", "Erhverv");
-            //var mailJesper = new Email("one@two-three.dk");
-            //var adr1 = new Adress("Ringvej", "7a", "8000", "Aarhus C");
-            //var adr2 = new Adress("Landmands vej", "1", "2900", "Hellerup");
-            //var personJesper = new Person(tlfJesper, adr1, "Jesper", "Jespersen", "Jes", "Mand", mailJesper);
+            //opret jesper
+            var tlfJesper = new Telephone("88888888", "TeleDanmark", "Erhverv");
+            var mailJesper = new Email("one@two-three.dk");
+            var adr1 = new Adress("Ringvej", "7a", "8000", "Aarhus C");
+            var adr2 = new Adress("Landmands vej", "1", "2900", "Hellerup");
+            var personJesper = new Person(tlfJesper, adr1, "Jesper", "Jespersen", "Jes", "Mand", mailJesper);
 
-            ////giv jesper en alternativ adresse
-            //AltAdresse jesperAlternativ = new AltAdresse();
-            //jesperAlternativ.AlternativeAdress = adr2;
-            //jesperAlternativ.TypeOfAdress = "sekundær";
-            //personJesper.altAdresser.Add(jesperAlternativ);
+            //giv jesper en alternativ adresse
+            AltAdresse jesperAlternativ = new AltAdresse();
+            jesperAlternativ.AlternativeAdress = adr2;
+            jesperAlternativ.TypeOfAdress = "sekundær";
+            personJesper.altAdresser.Add(jesperAlternativ);
 
-            ////opret Peter
-            //var tlf2 = new Telephone("77777777", "TeleDanmark", "Erhverv");
-            //var mailPeter = new Email("two@two-three.dk");
-            ////peter bor sammen med Jesper på samme primær adresse
-            //var person2 = new Person(tlf2, adr1, "Peter", "Jensen", "", "Mand", mailPeter);
+            //opret Peter
+            var tlf2 = new Telephone("77777777", "TeleDanmark", "Erhverv");
+            var mailPeter = new Email("two@two-three.dk");
+            //peter bor sammen med Jesper på samme primær adresse
+            var person2 = new Person(tlf2, adr1, "Peter", "Jensen", "", "Mand", mailPeter);
 
-            //UOW.PersonRepository.Add(personJesper);
-            //UOW.PersonRepository.Add(person2);
-            //UOW.Commit();
+            UOW.PersonRepository.Add(personJesper);
+            UOW.PersonRepository.Add(person2);
+            UOW.Commit();
 
-            Console.WriteLine(UOW.PersonRepository.First(x => x.GivenName == "peter").GivenName); //insane
- 
-            foreach (var VARIABLE in UOW.PersonRepository.GetAll())
-            {
-                Console.WriteLine(VARIABLE.GivenName);
-            }
+            //Console.WriteLine(UOW.PersonRepository.First(x => x.GivenName == "peter").GivenName); //insane
+
+            //var xyh = UOW.PersonRepository.First(x => x.GivenName == "peter");
+
+            //foreach (var VARIABLE in xyh.Telephones)
+            //{
+            //    Console.WriteLine(VARIABLE.TelephoneNumber);
+            //    Console.WriteLine(VARIABLE.PhoneCompany);
+            //}
+            //foreach (var VARIABLE in UOW.PersonRepository.GetAll())
+            //{
+            //    Console.WriteLine(VARIABLE.GivenName);
+            //}
 
         }
     }

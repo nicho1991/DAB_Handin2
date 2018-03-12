@@ -5,20 +5,25 @@ public class Person
 {
     public string PersonType;
 
-    public List<Telephone> Telephones { get; set; } = new List<Telephone>();
-    public List<AltAdresse> altAdresser { get; set; } = new List<AltAdresse>();
-    //public Person(Telephone phone, Adress primaryAdress, string name, string famileName, string middleName, string type,
-    //    Email mail = null)
-    //{
-    //    PersonType = type;
-    //    Email = mail;
-    //    Telephones.Add(phone);
-    //    FRa = primaryAdress;
+    public ICollection<Telephone> Telephones { get; set; } = new List<Telephone>();
+    public ICollection<AltAdresse> altAdresser { get; set; } = new List<AltAdresse>();
 
-    //    GivenName = name;
-    //    MiddleName = middleName;
-    //    FamilyName = famileName;
-    //}
+    public Person()
+    {
+        
+    }
+    public Person(Telephone phone, Adress primaryAdress, string name, string famileName, string middleName, string type,
+        Email mail = null)
+    {
+        PersonType = type;
+        Email = mail;
+        Telephones.Add(phone);
+        FRa = primaryAdress;
+
+        GivenName = name;
+        MiddleName = middleName;
+        FamilyName = famileName;
+    }
     [Key]
     public int PersonID { get; set; }
     public Email Email { get; set; }
