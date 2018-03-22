@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAB2._1;
 using DAB2._2.UnitOfWork;
 
 namespace Main2._2
@@ -35,21 +36,9 @@ namespace Main2._2
             UOW.addPerson(person2);
             UOW.Commit();
 
-            //Console.WriteLine(UOW.PersonRepository.GetById(1));
+            //PersonIndex newIndex = new PersonIndex();
 
-            //Console.WriteLine(UOW.PersonRepository.First(x => x.GivenName == "peter").GivenName); //insane
-
-            //var xyh = UOW.PersonRepository.First(x => x.GivenName == "peter");
-
-            //foreach (var VARIABLE in xyh.Telephones)
-            //{
-            //    Console.WriteLine(VARIABLE.TelephoneNumber);
-            //    Console.WriteLine(VARIABLE.PhoneCompany);
-            //}
-            //foreach (var VARIABLE in UOW.PersonRepository.GetAll())
-            //{
-            //    Console.WriteLine(VARIABLE.GivenName);
-            //}
+            //newIndex.PrintPerson(UOW.GetPersonByEmail("one@two-three.dk"));
 
         }
     }

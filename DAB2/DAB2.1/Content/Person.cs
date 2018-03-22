@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Person
 {
@@ -18,8 +19,12 @@ public class Person
         PersonType = type;
         Email = mail;
         Telephones.Add(phone);
-        FRa = primaryAdress;
+        AltAdresse PrimaryAdress = new AltAdresse();
+        PrimaryAdress.TypeOfAdress = "Primary";
+        PrimaryAdress.AlternativeAdress = primaryAdress;
+        altAdresser.Add(PrimaryAdress);
 
+        Type = type;
         GivenName = name;
         MiddleName = middleName;
         FamilyName = famileName;
@@ -28,19 +33,13 @@ public class Person
     public int PersonID { get; set; }
     public Email Email { get; set; }
     public string FamilyName { get; set; }
-    public Adress FRa { get; set; }
+    public string Type { get; set; }
+
     public string GivenName { get; set; }
     public string MiddleName { get; set; }
 
-    public void AddAlternativeAdress(AltAdresse altAdress)
-    {
-        if (altAdress.AlternativeAdress == FRa) return; //ingen folkeregister adresse som alt adr
-        altAdresser.Add(altAdress);
-        
-    }
+    [ForeignKey("Adress")]
+    public int AdressRefId { get; set; }
+    public Adress Adress { get; set; }
 
-    public void ReplaceMail(Email mail)
-    {
-        Email = mail;
-    }
 }

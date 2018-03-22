@@ -11,11 +11,13 @@ namespace DAB2._2.UnitOfWork
         private readonly EFRepositorycs<Adress> _AdressRepository;
         private readonly EFRepositorycs<Telephone> _TelephoneRepository;
         private readonly EFRepositorycs<AltAdresse> _AltAdressRepository;
+        private readonly EFRepositorycs<Email> _emailRepository;
 
         public DbSet<Person> Persons { get; set; }
         public DbSet<Adress> Adresses { get; set; }
         public DbSet<Telephone> Telephones { get; set; }
         public DbSet<AltAdresse> AltAdresses { get; set; }
+        public DbSet<Email> Emails { get; set; }
 
         public EFUnitOfWork()
         {
@@ -23,6 +25,7 @@ namespace DAB2._2.UnitOfWork
             _AdressRepository = new EFRepositorycs<Adress>(Adresses);
             _TelephoneRepository = new EFRepositorycs<Telephone>(Telephones);
             _AltAdressRepository = new EFRepositorycs<AltAdresse>(AltAdresses);
+            _emailRepository = new EFRepositorycs<Email>(Emails);
 
         }
 
@@ -36,24 +39,31 @@ namespace DAB2._2.UnitOfWork
             }
         }
 
-        public Person GetPersonByEmail(string Email)
+        public Person GetPersonByEmail(string EmailParam)
         {
-            int ID;
-            
-            Person ThePerson = _personRepository.First(x => x.Email.UniqueEmail == Email);
-            if (ThePerson != null)
+
+            Email NewEmail = _emailRepository.First(x => x.UniqueEmail.ToString() == EmailParam);
+            if (NewEmail == null)
             {
-                ID = ThePerson.PersonID;
+                Person FalsePerson = null;
+                return FalsePerson;
             }
-            else
-            {
-                ThePerson.GivenName = "does not exsist";
-                return ThePerson; // did not exsist
-            }
+
+            Person TempPerson = _personRepository.First(x => x.Email.UniqueEmail == EmailParam);
+            int ID = TempPerson.PersonID;
 
             Telephone newtlf = _TelephoneRepository.First(x => x.PersonRefId == ID);
+            Email newEmail = _emailRepository.First(x => x.UniqueEmail == EmailParam);
+            Adress newPrimaryAdress = _AdressRepository.First(x => x.adressID == TempPerson.AdressRefId);
 
-            return ThePerson;
+            Person PersonToReturn = new Person(newtlf, newPrimaryAdress, TempPerson.GivenName, TempPerson.FamilyName, TempPerson.MiddleName, TempPerson.Type, newEmail);
+            AltAdresse tempAltAdress = new AltAdresse();
+
+            foreach (var VARIABLE in _AltAdressRepository.Find(x => x.person.PersonID == ID))
+            {
+                PersonToReturn.altAdresser.Add(VARIABLE);
+            }
+            return PersonToReturn;
         }
 
         public void Commit()

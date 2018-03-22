@@ -4,6 +4,10 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Telephone
 {
+    public Telephone()
+    {
+
+    }
     public Telephone(string telephoneNumber, string phoneCompany, string usage)
     {
         PhoneCompany = phoneCompany;

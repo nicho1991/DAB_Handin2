@@ -6,6 +6,15 @@ namespace DAB2._1
     {
         public void PrintPerson(Person printHim)
         {
+            Adress FRa = null;
+            foreach (var VARIABLE in printHim.altAdresser)
+            {
+                if (VARIABLE.TypeOfAdress == "Primary")
+                {
+                    FRa = VARIABLE.AlternativeAdress;
+                }
+            }
+
             //navn
             Console.WriteLine("Navn:\t\t\t" + printHim.GivenName + " " + printHim.MiddleName + " " +
                               printHim.FamilyName);
@@ -23,7 +32,7 @@ namespace DAB2._1
                 Console.WriteLine((telefoner++)+"." + "\t\t\t" + variable.TelephoneNumber + " Type: " + variable.UsageOfTlf + " Teleselskab: " + variable.PhoneCompany); 
 
             // print primær adresse
-            Console.WriteLine("Primær adresse:\t\t" + printHim.FRa.ZipCode + " " + printHim.FRa.CityName + " " + printHim.FRa.StreetName + " " + printHim.FRa.HouseNumber);
+            Console.WriteLine("Primær adresse:\t\t" + FRa.ZipCode + " " + FRa.CityName + " " + FRa.StreetName + " " + FRa.HouseNumber);
 
             //alternative adresser
             if (printHim.altAdresser.Count > 0)

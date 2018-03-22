@@ -2,6 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 public class Email
 {
+    public Email()
+    { }
     public Email(string email)
     {
         UniqueEmail = email;

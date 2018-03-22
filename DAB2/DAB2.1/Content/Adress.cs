@@ -3,7 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 public class Adress
 {
-    public ICollection<AltAdresse> altAdresser { get; set; } = new List<AltAdresse>();
+   // public ICollection<AltAdresse> altAdresser { get; set; } = new List<AltAdresse>();
+
+    public Adress()
+    {
+
+    }
     public Adress(string streetName, string houseNumber, string zipCode, string cityName)
     {
         StreetName = streetName;
