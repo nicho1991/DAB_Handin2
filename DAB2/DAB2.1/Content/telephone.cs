@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.Cryptography.X509Certificates;
 
 public class Telephone
 {
@@ -13,4 +15,9 @@ public class Telephone
     public string PhoneCompany { get; set; }
     public string TelephoneNumber { get; set; }
     public string UsageOfTlf { get; set; }
+
+    [ForeignKey("Person")]
+    public int PersonRefId { get; set; }
+    public Person Person { get; set; }
+
 }

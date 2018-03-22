@@ -55,6 +55,7 @@ namespace DAB2._2.DAL
 
         public void Add(T entity)
         {
+
             _dbSet.Add(entity);
         }
 

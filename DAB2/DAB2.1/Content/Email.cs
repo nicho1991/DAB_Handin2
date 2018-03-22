@@ -6,7 +6,6 @@ public class Email
     {
         UniqueEmail = email;
     }
-    [Key]
-    public int emailID { get; set; }
-    public string UniqueEmail { get; set; }
+
+    [Key] public string UniqueEmail { get; set; }
 }

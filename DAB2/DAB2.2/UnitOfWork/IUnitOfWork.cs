@@ -11,7 +11,7 @@ namespace DAB2._2.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGenericRepository<Person> PersonRepository { get; }
+        //IGenericRepository<Person> PersonRepository { get; }
 
         void Commit();
     }

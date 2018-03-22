@@ -31,9 +31,11 @@ namespace Main2._2
             //peter bor sammen med Jesper på samme primær adresse
             var person2 = new Person(tlf2, adr1, "Peter", "Jensen", "", "Mand", mailPeter);
 
-            UOW.PersonRepository.Add(personJesper);
-            UOW.PersonRepository.Add(person2);
+            UOW.addPerson(personJesper);
+            UOW.addPerson(person2);
             UOW.Commit();
+
+            //Console.WriteLine(UOW.PersonRepository.GetById(1));
 
             //Console.WriteLine(UOW.PersonRepository.First(x => x.GivenName == "peter").GivenName); //insane
 
