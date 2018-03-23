@@ -6,15 +6,26 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using System.Threading.Tasks;
+using DAB2._2.DAL;
 
 namespace DAB2._2.UnitOfWork
 {
-    public class DocumentDBUnitOfWork
+    public class DocumentDBUnitOfWork : IUnitOfWork
     {
+        #region Private essentials
         private DocumentClient client;
         private const string EndpointUrl = "https://localhost:8081";
         private const string PrimaryKey = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
+        private const string DatabaseName = "DAB2.2DocumentDB";
+        private const string CollectionName = "PersonCollection";
 
+        private readonly DocumentDBRepository<Person> _personRepository;
+
+        public DocumentCollection Persons { get; set; }
+
+        #endregion
+
+        #region SetupOfDB
         public DocumentDBUnitOfWork()
         {
             try
@@ -38,18 +49,52 @@ namespace DAB2._2.UnitOfWork
                 Console.ReadKey();
             }
         }
-
         private async Task LoadDB()
         {
             //point client to Database service
             this.client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
             //Create Database FamilyDB
-            await this.client.CreateDatabaseIfNotExistsAsync(new Database { Id = "DAB2.2DocumentDB" });
+            await this.client.CreateDatabaseIfNotExistsAsync(new Database { Id = DatabaseName });
             //create collection FamilyCollection on FamilyDB
-            await this.client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri("DAB2.2DocumentDB"), new DocumentCollection { Id = "PersonCollection" });
+            Persons = await this.client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri(DatabaseName), new DocumentCollection { Id = CollectionName });
 
+            Person P = client.CreateDocumentQuery<Person>(CollectionName).AsEnumerable().First(x => x.GivenName == "hans");
+ 
+        }
+        #endregion
+
+        #region Methods
+
+        public void addPerson(Person thisOne)
+        {
+            if (!_personRepository.Find(x => x.Email.UniqueEmail == thisOne.Email.UniqueEmail).Any())
+            {
+                _personRepository.Add(thisOne);
+            }
         }
 
+        public Person GetPersonByEmail(string EmailParam)
+        {
+
+            return new Person();
+        }
+
+        #endregion
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Commit()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void Commit(Person Commithim)
+        {
+            await this.client.ReadDocumentAsync(UriFactory.CreateDocumentUri(DatabaseName, CollectionName, Commithim.Email.UniqueEmail));
+        }
     }
 }
 

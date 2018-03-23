@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAB2.1\DAB2.1.csproj">
+      <Project>{1221698B-4802-44CC-B2D0-77ECCECC4C5B}</Project>
+      <Name>DAB2.1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAB2.2\DAB2.2.csproj">
       <Project>{ad2ff7d1-af3b-4b30-bdd9-c4bc15fb30da}</Project>
       <Name>DAB2.2</Name>
