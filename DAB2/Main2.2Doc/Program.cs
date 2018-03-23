@@ -34,8 +34,8 @@ namespace Main2._2Doc
             var person2 = new Person(tlf2, adr1, "Peter", "Jensen", "", "Mand", mailPeter);
 
             UOW.addPerson(personJesper);
-            UOW.addPerson(person2);
-            UOW.Commit(personJesper);
+            //UOW.addPerson(person2);
+            //UOW.Commit(personJesper);
 
             #endregion
 

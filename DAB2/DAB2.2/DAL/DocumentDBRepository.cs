@@ -9,19 +9,19 @@ using Microsoft.Azure.Documents.Client;
 
 namespace DAB2._2.DAL
 {
-    class DocumentDBRepository<T> : IGenericRepository<T> where T : class
+    class DocumentDBRepository<T> where T : class
     {
         private DocumentClient client;
-        private DocumentCollection collection;
+        private string documentLink;
         public DocumentDBRepository(DocumentCollection p, DocumentClient x)
         {
             client = x;
-            collection = p;
+            documentLink = p.DocumentsLink;
         }
-        public void Add(T entity)
+        public async void Add(T entity)
         {
-            
-            throw new NotImplementedException();
+           await client.CreateDocumentAsync(documentLink, typeof(T));   
+
         }
 
         public IQueryable<T> AsQueryable()
@@ -39,9 +39,9 @@ namespace DAB2._2.DAL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
+        public IEnumerable<T> Find(Func<T, bool> predicate)
         {
-            throw new NotImplementedException();
+            return client.CreateDocumentQuery<T>("personCollection").AsEnumerable().Where(predicate);
         }
 
         public T First(Func<T, bool> predicate)

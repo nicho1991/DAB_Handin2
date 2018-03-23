@@ -19,7 +19,7 @@ namespace DAB2._2.UnitOfWork
         private const string DatabaseName = "DAB2.2DocumentDB";
         private const string CollectionName = "PersonCollection";
 
-        private readonly DocumentDBRepository<Person> _personRepository;
+        private DocumentDBRepository<Person> _personRepository;
 
         public DocumentCollection Persons { get; set; }
 
@@ -57,9 +57,7 @@ namespace DAB2._2.UnitOfWork
             await this.client.CreateDatabaseIfNotExistsAsync(new Database { Id = DatabaseName });
             //create collection FamilyCollection on FamilyDB
             Persons = await this.client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri(DatabaseName), new DocumentCollection { Id = CollectionName });
-
-            Person P = client.CreateDocumentQuery<Person>(CollectionName).AsEnumerable().First(x => x.GivenName == "hans");
- 
+            _personRepository = new DocumentDBRepository<Person>(Persons,client);
         }
         #endregion
 
@@ -67,10 +65,7 @@ namespace DAB2._2.UnitOfWork
 
         public void addPerson(Person thisOne)
         {
-            if (!_personRepository.Find(x => x.Email.UniqueEmail == thisOne.Email.UniqueEmail).Any())
-            {
-                _personRepository.Add(thisOne);
-            }
+            _personRepository.Add(thisOne);
         }
 
         public Person GetPersonByEmail(string EmailParam)
