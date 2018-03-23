@@ -35,15 +35,19 @@ namespace DAB2._1
             Console.WriteLine("Primær adresse:\t\t" + FRa.ZipCode + " " + FRa.CityName + " " + FRa.StreetName + " " + FRa.HouseNumber);
 
             //alternative adresser
-            if (printHim.altAdresser.Count > 0)
+            if (printHim.altAdresser.Count > 1)
             {
                 Console.WriteLine("Andre adresser: ");
             }
            
             int adresser = 1;
             foreach (var Adresse in printHim.altAdresser) //print alternative adresser
-                    Console.WriteLine(adresser++ +"."+ "\t\t\t" + Adresse.TypeOfAdress + " " + Adresse.AlternativeAdress.ZipCode + " " + Adresse.AlternativeAdress.CityName + " " +
+                if (Adresse.TypeOfAdress != "Primary")
+                {
+                    Console.WriteLine(adresser++ + "." + "\t\t\t"  + Adresse.AlternativeAdress.ZipCode + " " + Adresse.AlternativeAdress.CityName + " " +
                                       Adresse.AlternativeAdress.StreetName + " " + Adresse.AlternativeAdress.HouseNumber);
+                }
+
         }
     }
 }

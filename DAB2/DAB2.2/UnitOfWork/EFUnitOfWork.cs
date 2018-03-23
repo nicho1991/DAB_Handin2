@@ -54,14 +54,15 @@ namespace DAB2._2.UnitOfWork
 
             Telephone newtlf = _TelephoneRepository.First(x => x.PersonRefId == ID);
             Email newEmail = _emailRepository.First(x => x.UniqueEmail == EmailParam);
-            Adress newPrimaryAdress = _AdressRepository.First(x => x.adressID == TempPerson.AdressRefId);
+            Adress newPrimaryAdress = _AltAdressRepository.First(x => x.person.PersonID == TempPerson.PersonID).AlternativeAdress;
 
             Person PersonToReturn = new Person(newtlf, newPrimaryAdress, TempPerson.GivenName, TempPerson.FamilyName, TempPerson.MiddleName, TempPerson.Type, newEmail);
             AltAdresse tempAltAdress = new AltAdresse();
 
             foreach (var VARIABLE in _AltAdressRepository.Find(x => x.person.PersonID == ID))
             {
-                PersonToReturn.altAdresser.Add(VARIABLE);
+                VARIABLE.AlternativeAdress = _AdressRepository.First(x => x.adressID == VARIABLE.altAdrID);
+                PersonToReturn.altAdresser.Add(VARIABLE); 
             }
             return PersonToReturn;
         }

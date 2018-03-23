@@ -38,8 +38,4 @@ public class Person
     public string GivenName { get; set; }
     public string MiddleName { get; set; }
 
-    [ForeignKey("Adress")]
-    public int AdressRefId { get; set; }
-    public Adress Adress { get; set; }
-
 }
