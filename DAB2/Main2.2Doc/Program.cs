@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAB2._2;
 using DAB2._2.UnitOfWork;
+using DocumentDB.Repository;
+using DocumentDB;
 
 namespace Main2._2Doc
 {
@@ -11,7 +14,6 @@ namespace Main2._2Doc
     {
         static void Main(string[] args)
         {
-            DocumentDBUnitOfWork UOW = new DocumentDBUnitOfWork();
 
             #region Setup
             //opret jesper
@@ -33,8 +35,10 @@ namespace Main2._2Doc
             //peter bor sammen med Jesper på samme primær adresse
             var person2 = new Person(tlf2, adr1, "Peter", "Jensen", "", "Mand", mailPeter);
 
-            UOW.addPerson(personJesper);
-            //UOW.addPerson(person2);
+
+            DocumentDBUnitOfWork x = new DocumentDBUnitOfWork(new DBContext());
+
+            x._PersonRepository.AddUser(personJesper).Wait();
             //UOW.Commit(personJesper);
 
             #endregion
