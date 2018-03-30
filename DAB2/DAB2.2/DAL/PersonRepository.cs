@@ -29,8 +29,7 @@ namespace DAB2._2.DAL
             }
             catch (Exception e)
             {
-                Console.WriteLine("called");
-                Document created = await _context.client.CreateDocumentAsync(_context.PersonCollection.DocumentsLink, thisUser);
+                Document created = await _Context.client.CreateDocumentAsync(_Context.PersonCollection.DocumentsLink, thisUser);
                 Console.WriteLine(created);
 
             }
@@ -40,7 +39,7 @@ namespace DAB2._2.DAL
         public Person GetUserByEmail(string id)
         {
 
-            Person TheUser = _context.client.CreateDocumentQuery<Person>(_context.PersonCollection.DocumentsLink)
+            Person TheUser = _Context.client.CreateDocumentQuery<Person>(_Context.PersonCollection.DocumentsLink)
                 .Where(x => x.Email.UniqueEmail == id)
                 .AsEnumerable()
                 .FirstOrDefault();

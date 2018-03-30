@@ -38,8 +38,13 @@ namespace Main2._2Doc
 
             DocumentDBUnitOfWork x = new DocumentDBUnitOfWork(new DBContext());
 
-            x._PersonRepository.AddUser(personJesper).Wait();
-            //UOW.Commit(personJesper);
+
+            string s = Console.ReadLine();
+
+           //x._PersonRepository.AddUser(personJesper).Wait();
+         //  var person = x._PersonRepository.GetUserByEmail(mailJesper.UniqueEmail);
+          //  Console.WriteLine("fandt: \n" + person.GivenName+ " "+person.MiddleName + " "+person.FamilyName);
+           // x._PersonRepository.DeleteUserByEmail(mailJesper.UniqueEmail);
 
             #endregion
 

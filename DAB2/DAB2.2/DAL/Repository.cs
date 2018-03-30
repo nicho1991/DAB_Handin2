@@ -8,7 +8,6 @@ namespace DAB2._2.DAL
 
         public Repository(DBContext context)
         {
-            Console.WriteLine("called");
             _Context = context;
         }
 

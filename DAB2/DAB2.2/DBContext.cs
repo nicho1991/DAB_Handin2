@@ -59,7 +59,7 @@ namespace DAB2._2
             client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
             await client.CreateDatabaseIfNotExistsAsync(new Database { Id = "PersonDB" });
             PersonCollection = await client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri("PersonDB"),
-            new DocumentCollection { Id = "PersonCollection" });
+            new DocumentCollection { Id = "PersonDB" });
         }
         #endregion
     }
