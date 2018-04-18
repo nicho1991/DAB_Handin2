@@ -7,6 +7,7 @@ namespace DAB2._2.UnitOfWork
 {
     public class EFUnitOfWork : DbContext , IUnitOfWork
     {
+
         private readonly EFRepositorycs<Person> _personRepository;
         private readonly EFRepositorycs<Adress> _AdressRepository;
         private readonly EFRepositorycs<Telephone> _TelephoneRepository;
@@ -19,7 +20,7 @@ namespace DAB2._2.UnitOfWork
         public DbSet<AltAdresse> AltAdresses { get; set; }
         public DbSet<Email> Emails { get; set; }
 
-        public EFUnitOfWork()
+        public EFUnitOfWork() : base("name=ToSrv")
         {
             _personRepository = new EFRepositorycs<Person>(Persons);
             _AdressRepository = new EFRepositorycs<Adress>(Adresses);
