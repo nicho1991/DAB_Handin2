@@ -36,9 +36,9 @@ namespace Main2._2
         //    UOW.addPerson(person2);
             UOW.Commit();
 
-           // PersonIndex newIndex = new PersonIndex();
+       //     PersonIndex newIndex = new PersonIndex();
 
-           // newIndex.PrintPerson(UOW.GetPersonByEmail("one@two-three.dk"));
+      //      newIndex.PrintPerson(UOW.GetPersonByEmail("one@two-three.dk"));
 
         }
     }
