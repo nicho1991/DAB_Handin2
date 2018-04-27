@@ -45,6 +45,7 @@ namespace DAB2._2.DAL
 
         public T First(Expression<Func<T, bool>> predicate)
         {
+           
             return _dbSet.First(predicate);
         }
 

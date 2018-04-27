@@ -1,6 +1,9 @@
 ﻿
+using System.Collections;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using DAB2._2.DAL;
 
 namespace DAB2._2.UnitOfWork
@@ -59,13 +62,13 @@ namespace DAB2._2.UnitOfWork
 
             Person PersonToReturn = new Person(newtlf, newPrimaryAdress, TempPerson.GivenName, TempPerson.FamilyName, TempPerson.MiddleName, TempPerson.Type, newEmail);
 
-            foreach (var VARIABLE in _AltAdressRepository.Find(x => x.person.PersonID == ID))
+            List<AltAdresse> alt = _AltAdressRepository.Find(x => x.person.PersonID == ID).ToList();
+            foreach (var VARIABLE in alt)
             {
-                VARIABLE.AlternativeAdress = _AdressRepository.First(x => x.adressID == VARIABLE.altAdrID);
-
-                PersonToReturn.altAdresser.Add(VARIABLE);
-
+               VARIABLE.AlternativeAdress = _AdressRepository.SingleOrDefault(x => x.adressID == VARIABLE.altAdrID);
+               PersonToReturn.altAdresser.Add(VARIABLE);
             }
+
             return PersonToReturn;
         }
 
