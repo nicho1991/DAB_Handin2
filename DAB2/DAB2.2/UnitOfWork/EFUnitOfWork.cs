@@ -58,12 +58,13 @@ namespace DAB2._2.UnitOfWork
             Adress newPrimaryAdress = _AltAdressRepository.First(x => x.person.PersonID == TempPerson.PersonID).AlternativeAdress;
 
             Person PersonToReturn = new Person(newtlf, newPrimaryAdress, TempPerson.GivenName, TempPerson.FamilyName, TempPerson.MiddleName, TempPerson.Type, newEmail);
-            AltAdresse tempAltAdress = new AltAdresse();
 
             foreach (var VARIABLE in _AltAdressRepository.Find(x => x.person.PersonID == ID))
             {
                 VARIABLE.AlternativeAdress = _AdressRepository.First(x => x.adressID == VARIABLE.altAdrID);
-                PersonToReturn.altAdresser.Add(VARIABLE); 
+
+                PersonToReturn.altAdresser.Add(VARIABLE);
+
             }
             return PersonToReturn;
         }

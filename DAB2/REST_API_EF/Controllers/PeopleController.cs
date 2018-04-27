@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using DAB2._2.UnitOfWork;
 using REST_API_EF.Models;
 
 namespace REST_API_EF.Controllers
@@ -16,19 +17,21 @@ namespace REST_API_EF.Controllers
     public class PeopleController : ApiController
     {
         private REST_API_EFContext db = new REST_API_EFContext();
+        private EFUnitOfWork dbUnit = new EFUnitOfWork();
 
         // GET: api/People
         public IQueryable<Person> GetPeople()
         {
-            return db.People;
+            return dbUnit.Persons.AsQueryable();
+
         }
 
         // GET: api/People/5
         [ResponseType(typeof(Person))]
-        public async Task<IHttpActionResult> GetPerson(int id)
+        public async Task<IHttpActionResult> GetPerson(string id)
         {
             Person person;
-            person = db.People.ElementAt(id);
+            person = dbUnit.GetPersonByEmail(id);
             if (person == null)
             {
                 return NotFound();

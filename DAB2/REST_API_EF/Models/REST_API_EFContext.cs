@@ -15,7 +15,7 @@ namespace REST_API_EF.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public REST_API_EFContext() : base("name=REST_API_EFContext")
+        public REST_API_EFContext() : base("name=ToSrv")
         {
         }
 
