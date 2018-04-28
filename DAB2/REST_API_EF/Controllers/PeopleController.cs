@@ -54,7 +54,7 @@ namespace HandIn3._2.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != person.PersonId)
+            if (id != person.PersonID)
             {
                 return BadRequest();
             }
@@ -89,23 +89,23 @@ namespace HandIn3._2.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.People.Add(person);
+            db.Persons.Add(person);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = person.PersonId }, person);
+            return CreatedAtRoute("DefaultApi", new { id = person.PersonID }, person);
         }
 
         // DELETE: api/People/5
         [ResponseType(typeof(Person))]
         public async Task<IHttpActionResult> DeletePerson(int id)
         {
-            Person person = await db.People.FindAsync(id);
+            Person person = await db.Persons.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
             }
 
-            db.People.Remove(person);
+            db.Persons.Remove(person);
             await db.SaveChangesAsync();
 
             return Ok(person);
@@ -122,7 +122,7 @@ namespace HandIn3._2.Controllers
 
         private bool PersonExists(int id)
         {
-            return db.People.Count(e => e.PersonId == id) > 0;
+            return db.Persons.Count(e => e.PersonID == id) > 0;
         }
     }
 }
