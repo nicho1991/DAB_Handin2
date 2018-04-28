@@ -9,11 +9,22 @@ namespace REST_API_EF.Models
     {
         public int Id { get; set; }
 
-        public Adress PrimaryAdressAdress { get; set; }
+        public string cityname { get; set; }
+
+        public string housenumber { get; set; }
+
+        public string streetname { get; set; }
+
+        public string zipcode { get; set; }
+
 
         public PrimaryAdressDTO(Adress adr)
         {
-            PrimaryAdressAdress = adr;
+            Id = adr.adressID;
+            cityname = adr.CityName;
+            housenumber = adr.HouseNumber;
+            streetname = adr.StreetName;
+            zipcode = adr.ZipCode;
         }
     }
 }

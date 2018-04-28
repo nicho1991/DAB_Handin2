@@ -7,7 +7,6 @@ namespace REST_API_EF.Models
 {
     public class PhoneNumberDTO
     {
-        public int Id { get; set; }
         public string PhoneNumber { get; set; }
     }
 }
