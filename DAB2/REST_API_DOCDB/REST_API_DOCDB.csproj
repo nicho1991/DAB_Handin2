@@ -323,6 +323,16 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAB2.1\DAB2.1.csproj">
+      <Project>{1221698b-4802-44cc-b2d0-77eccecc4c5b}</Project>
+      <Name>DAB2.1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAB2.2\DAB2.2.csproj">
+      <Project>{ad2ff7d1-af3b-4b30-bdd9-c4bc15fb30da}</Project>
+      <Name>DAB2.2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
