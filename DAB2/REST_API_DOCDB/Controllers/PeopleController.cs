@@ -33,19 +33,19 @@ namespace HandIn3._2.Controllers
         //    //return people.AsQueryable();
         //}
 
-        //// GET: api/People/5
-        //[ResponseType(typeof(PersonDTO))]
-        //public async Task<IHttpActionResult> GetPerson(int id)
-        //{
-        //    Person person = await db.Persons.FindAsync(id);
+        // GET: api/People/5
+        [ResponseType(typeof(PersonDTO))]
+        public async Task<IHttpActionResult> GetPerson(string id)
+        {
+            Person person = db._PersonRepository.GetUserByEmail(id);
 
-        //    if (person == null)
-        //    {
-        //        return NotFound();
-        //    }
+            if (person == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(new PersonDTO(person));
-        //}
+            return Ok(new PersonDTO(person));
+        }
 
         //// PUT: api/People/5
         //[ResponseType(typeof(void))]
