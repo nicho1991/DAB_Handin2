@@ -38,8 +38,8 @@ namespace Main2._2
 
             PersonIndex newIndex = new PersonIndex();
 
-            Person x = UOW.GetPersonByEmail("one@two-three.dk");
-            newIndex.PrintPerson(x);
+            var x =  UOW.GetPersonByEmail("one@two-three.dk");
+            newIndex.PrintPerson(x.Result);
 
         }
     }

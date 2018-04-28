@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 using DAB2._2.DAL;
 
 namespace DAB2._2.UnitOfWork
@@ -43,7 +44,7 @@ namespace DAB2._2.UnitOfWork
             }
         }
 
-        public Person GetPersonByEmail(string EmailParam)
+        public async Task<Person> GetPersonByEmail(string EmailParam)
         {
 
             Email NewEmail = _emailRepository.First(x => x.UniqueEmail.ToString() == EmailParam);
@@ -65,8 +66,8 @@ namespace DAB2._2.UnitOfWork
             List<AltAdresse> alt = _AltAdressRepository.Find(x => x.person.PersonID == ID).ToList();
             foreach (var VARIABLE in alt)
             {
-               VARIABLE.AlternativeAdress = _AdressRepository.SingleOrDefault(x => x.adressID == VARIABLE.altAdrID);
-               PersonToReturn.altAdresser.Add(VARIABLE);
+                VARIABLE.AlternativeAdress = _AdressRepository.SingleOrDefault(x => x.adressID == VARIABLE.altAdrID);
+                PersonToReturn.altAdresser.Add(VARIABLE);
             }
 
             return PersonToReturn;
