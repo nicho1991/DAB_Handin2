@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using REST_API_EF.Models;
 
 namespace HandIn3._2.Models
 {
@@ -22,7 +23,7 @@ namespace HandIn3._2.Models
 
             Email = person.Email.UniqueEmail;
 
-            PrimaryAddress = new AddressDTO(person.);
+            PrimaryAddress = new AdressDTO(person.altAdresser.Select(x => x.TypeOfAdress == "Primary"));
 
             PersonAddresses = new List<PersonAddressDTO>();
 
