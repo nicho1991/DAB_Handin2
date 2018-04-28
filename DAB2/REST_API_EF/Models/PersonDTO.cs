@@ -43,15 +43,21 @@ namespace HandIn3._2.Models
             }
         }
 
-        public Person ToPerson()
-        {
-            return new Person() { PersonID = PersonId, GivenName = FirstName, MiddleName = MiddleName, FamilyName = LastName,
-                altAdresser = PersonAddresses,
-                Email = Email.d,
-                PrimaryAddress_AddressId = PrimaryAddress.AddressId,
-                PersonAddresses = PersonAddresses.Select(pa => pa.ToPersonAddress()).ToList(),
-                PhoneNumbers = PhoneNumbers.Select(pn => pn.ToPhoneNumber()).ToList() };
-        }
+        //public Person ToPerson()
+        //{
+        //    List<AltAdresse> altAdresses = new List<AltAdresse>();
+        //    foreach (var VARIABLE in PersonAddresses)
+        //    {
+                
+        //    }
+
+        //    return new Person() { PersonID = PersonId, GivenName = FirstName, MiddleName = MiddleName, FamilyName = LastName,
+        //        altAdresser = PersonAddresses,
+        //        Email = Email.d,
+        //        PrimaryAddress_AddressId = PrimaryAddress.AddressId,
+        //        PersonAddresses = PersonAddresses.Select(pa => pa.ToPersonAddress()).ToList(),
+        //        PhoneNumbers = PhoneNumbers.Select(pn => pn.ToPhoneNumber()).ToList() };
+        //}
 
         public int PersonId { get; set; }
 

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using DAB2._2.UnitOfWork;
+using HandIn3._2.Models;
 
 namespace HandIn3._2.Controllers
 {
@@ -34,7 +35,7 @@ namespace HandIn3._2.Controllers
         [ResponseType(typeof(PersonDTO))]
         public async Task<IHttpActionResult> GetPerson(int id)
         {
-            Person person = await db.People.FindAsync(id);
+            Person person = await db.Persons.FindAsync(id);
 
             if (person == null)
             {
