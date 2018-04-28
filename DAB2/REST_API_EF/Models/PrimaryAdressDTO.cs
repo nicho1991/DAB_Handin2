@@ -5,7 +5,15 @@ using System.Web;
 
 namespace REST_API_EF.Models
 {
-    public class AdressDTO
+    public class PrimaryAdressDTO
     {
+        public int Id { get; set; }
+
+        public Adress PrimaryAdressAdress { get; set; }
+
+        public PrimaryAdressDTO(Adress adr)
+        {
+            PrimaryAdressAdress = adr;
+        }
     }
 }
