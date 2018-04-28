@@ -32,10 +32,7 @@ namespace REST_API_EF.Models
             Usage = T.UsageOfTlf;
             telephoneId = T.telephoneID;
 
-
         }
 
-
     }
     }
-}

@@ -17,7 +17,6 @@ namespace REST_API_EF.Models
 
         public string zipcode { get; set; }
 
-
         public SecondaryAdressDTO(Adress adr)
         {
             Id = adr.adressID;
@@ -27,5 +26,4 @@ namespace REST_API_EF.Models
             zipcode = adr.ZipCode;
         }
     }
-}
 }
