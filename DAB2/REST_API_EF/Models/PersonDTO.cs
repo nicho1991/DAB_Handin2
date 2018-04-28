@@ -23,18 +23,21 @@ namespace HandIn3._2.Models
 
             Email = person.Email.UniqueEmail;
 
-            PrimaryAddress = new AdressDTO(person.altAdresser.Select(x => x.TypeOfAdress == "Primary"));
+            PrimaryAddress = new PrimaryAdressDTO(person.altAdresser.First(x => x.TypeOfAdress == "Primary").AlternativeAdress);
 
-            PersonAddresses = new List<PersonAddressDTO>();
+            PersonAddresses = new List<SecondaryAdressDTO>();
 
             PhoneNumbers = new List<PhoneNumberDTO>();
 
-            foreach (PersonAddress pa in person.PersonAddresses)
+            foreach (AltAdresse pa in person.altAdresser)
             {
-                PersonAddresses.Add(new PersonAddressDTO(pa));
+                if (pa.TypeOfAdress != "Primary")
+                {
+                    PersonAddresses.Add(new SecondaryAdressDTO(pa.AlternativeAdress));
+                }
             }
 
-            foreach (PhoneNumber pn in person.PhoneNumbers)
+            foreach (Telephone pn in person.Telephones)
             {
                 PhoneNumbers.Add(new PhoneNumberDTO(pn));
             }
@@ -43,7 +46,7 @@ namespace HandIn3._2.Models
         public Person ToPerson()
         {
             return new Person() { PersonID = PersonId, GivenName = FirstName, MiddleName = MiddleName, FamilyName = LastName,
-                altAdresser = d,
+                altAdresser = PersonAddresses,
                 Email = Email.d,
                 PrimaryAddress_AddressId = PrimaryAddress.AddressId,
                 PersonAddresses = PersonAddresses.Select(pa => pa.ToPersonAddress()).ToList(),
@@ -60,9 +63,9 @@ namespace HandIn3._2.Models
 
         public string Email { get; set; }
 
-        public AddressDTO PrimaryAddress { get; set; }
+        public PrimaryAdressDTO PrimaryAddress { get; set; }
 
-        public List<PersonAddressDTO> PersonAddresses { get; set; }
+        public List<SecondaryAdressDTO> PersonAddresses { get; set; }
 
         public List<PhoneNumberDTO> PhoneNumbers { get; set; }
     }

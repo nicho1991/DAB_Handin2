@@ -194,10 +194,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AdressDTO.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonDTO.cs" />
     <Compile Include="Models\PhoneNumberDTO.cs" />
+    <Compile Include="Models\PrimaryAdressDTO.cs" />
+    <Compile Include="Models\SecondaryAdress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
