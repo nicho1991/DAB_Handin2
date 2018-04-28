@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main2.2Doc", "Main2.2Doc\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST_API_EF", "REST_API_EF\REST_API_EF.csproj", "{375C77AA-7DE3-413F-8D50-E4F00E8DBB82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST_API_DOCDB", "REST_API_DOCDB\REST_API_DOCDB.csproj", "{81955E5C-49DE-49A4-8995-B2E02323C3AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,12 +47,16 @@ Global
 		{375C77AA-7DE3-413F-8D50-E4F00E8DBB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{375C77AA-7DE3-413F-8D50-E4F00E8DBB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{375C77AA-7DE3-413F-8D50-E4F00E8DBB82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81955E5C-49DE-49A4-8995-B2E02323C3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81955E5C-49DE-49A4-8995-B2E02323C3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81955E5C-49DE-49A4-8995-B2E02323C3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81955E5C-49DE-49A4-8995-B2E02323C3AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {012FB02F-47FA-4661-B55B-32F4F70115F4}
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8
+		SolutionGuid = {012FB02F-47FA-4661-B55B-32F4F70115F4}
 	EndGlobalSection
 EndGlobal
