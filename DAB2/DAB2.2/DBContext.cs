@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DocumentDb.Repository.Infrastructure;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 
@@ -17,9 +18,8 @@ namespace DAB2._2
 
         #region Private essentials
 
-        
-        private const string EndpointUrl = "https://localhost:8081";
-        private const string PrimaryKey = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
+        private const string EndpointUrl = "https://lol.documents.azure.com:443/";
+        private const string PrimaryKey = "M7QX96diMd8SpUebjuc3241WYeYALz6eDonOQslpDFznhhQDxMSpfIMf2L8EC4VEAYAlnWM8Fc8FVxQ4S4mvzw==";
         private const string DatabaseName = "DAB2.2DocumentDB";
         private const string CollectionName = "PersonCollection";
 
@@ -48,18 +48,15 @@ namespace DAB2._2
                 Exception baseException = e.GetBaseException();
                 Console.WriteLine("Error: {0}, Message: {1}", e.Message, baseException.Message);
             }
-            finally
-            {
-                Console.WriteLine("End of program");
-                Console.ReadKey();
-            }
+
         }
         private async Task LoadDB()
         {
             client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
-            await client.CreateDatabaseIfNotExistsAsync(new Database { Id = "PersonDB" });
-            PersonCollection = await client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri("PersonDB"),
-            new DocumentCollection { Id = "PersonDB" });
+
+            await this.client.CreateDatabaseIfNotExistsAsync(new Database { Id = DatabaseName });
+            PersonCollection = await client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri(DatabaseName),
+            new DocumentCollection { Id = CollectionName });
         }
         #endregion
     }

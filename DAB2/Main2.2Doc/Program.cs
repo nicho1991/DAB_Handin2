@@ -35,16 +35,12 @@ namespace Main2._2Doc
             //peter bor sammen med Jesper på samme primær adresse
             var person2 = new Person(tlf2, adr1, "Peter", "Jensen", "", "Mand", mailPeter);
 
-
             DocumentDBUnitOfWork x = new DocumentDBUnitOfWork(new DBContext());
 
-
-            string s = Console.ReadLine();
-
-           //x._PersonRepository.AddUser(personJesper).Wait();
-         //  var person = x._PersonRepository.GetUserByEmail(mailJesper.UniqueEmail);
-          //  Console.WriteLine("fandt: \n" + person.GivenName+ " "+person.MiddleName + " "+person.FamilyName);
-           // x._PersonRepository.DeleteUserByEmail(mailJesper.UniqueEmail);
+            x._PersonRepository.AddUser(personJesper).Wait();
+            var person = x._PersonRepository.GetUserByEmail(mailJesper.UniqueEmail);
+            Console.WriteLine("fandt: \n" + person.GivenName + " " + person.MiddleName + " " + person.FamilyName);
+            x._PersonRepository.DeleteUserByEmail(mailJesper.UniqueEmail);
 
             #endregion
 
