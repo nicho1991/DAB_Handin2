@@ -21,26 +21,26 @@ namespace HandIn3._2.Models
 
             LastName = person.FamilyName;
 
-            //Email = person.Email.UniqueEmail;
+            Email = person.Email.UniqueEmail;
 
-            //PrimaryAddress = new PrimaryAdressDTO(person.altAdresser.First(x => x.TypeOfAdress == "Primary").AlternativeAdress);
+            PrimaryAddress = new PrimaryAdressDTO(person.altAdresser.First(x => x.TypeOfAdress == "Primary").AlternativeAdress);
 
-            //PersonAddresses = new List<SecondaryAdressDTO>();
+            PersonAddresses = new List<SecondaryAdressDTO>();
 
-            //PhoneNumbers = new List<PhoneNumberDTO>();
+            PhoneNumbers = new List<PhoneNumberDTO>();
 
-            //foreach (AltAdresse pa in person.altAdresser)
-            //{
-            //    if (pa.TypeOfAdress != "Primary")
-            //    {
-            //        PersonAddresses.Add(new SecondaryAdressDTO(pa.AlternativeAdress));
-            //    }
-            //}
+            foreach (AltAdresse pa in person.altAdresser)
+            {
+                if (pa.TypeOfAdress != "Primary")
+                {
+                    PersonAddresses.Add(new SecondaryAdressDTO(pa.AlternativeAdress));
+                }
+            }
 
-            //foreach (Telephone pn in person.Telephones)
-            //{
-            //    PhoneNumbers.Add(new PhoneNumberDTO(pn));
-            //}
+            foreach (Telephone pn in person.Telephones)
+            {
+                PhoneNumbers.Add(new PhoneNumberDTO(pn));
+            }
         }
 
         //public Person ToPerson()
@@ -67,12 +67,12 @@ namespace HandIn3._2.Models
 
         public string LastName { get; set; }
 
-        //public string Email { get; set; }
+        public string Email { get; set; }
 
-        //public PrimaryAdressDTO PrimaryAddress { get; set; }
+        public PrimaryAdressDTO PrimaryAddress { get; set; }
 
-        //public List<SecondaryAdressDTO> PersonAddresses { get; set; }
+        public List<SecondaryAdressDTO> PersonAddresses { get; set; }
 
-        //public List<PhoneNumberDTO> PhoneNumbers { get; set; }
+        public List<PhoneNumberDTO> PhoneNumbers { get; set; }
     }
 }

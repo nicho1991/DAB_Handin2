@@ -37,7 +37,6 @@ namespace HandIn3._2.Controllers
         [ResponseType(typeof(PersonDTO))]
         public async Task<IHttpActionResult> GetPerson(string id)
         {
-
             Person person = db._PersonRepository.GetUserByEmail("one@two-three.dk");
 
             if (person == null)
