@@ -198,7 +198,7 @@
     <Compile Include="Models\PersonDTO.cs" />
     <Compile Include="Models\PhoneNumberDTO.cs" />
     <Compile Include="Models\PrimaryAdressDTO.cs" />
-    <Compile Include="Models\SecondaryAdress.cs" />
+    <Compile Include="Models\SecondaryAdressDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
